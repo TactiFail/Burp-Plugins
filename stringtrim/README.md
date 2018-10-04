@@ -10,3 +10,5 @@ Carl: I didn't say that. I said I don't know what it's for, what it does is [tri
 Anyway, it requires JPython so make sure you have that configured in Burp.
 
 Oh, and it doesn't work well in the Battering Ram configuration since there are multiple positions that could be used to determine the payload ([ref](https://github.com/PortSwigger/burp-extender-api/blob/master/src/main/java/burp/IIntruderPayloadGenerator.java#L34-L37)).
+
+Also thank you [@redteamsecure](https://twitter.com/redteamsecure) for letting me work on this on company time  <3
