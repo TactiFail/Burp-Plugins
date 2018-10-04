@@ -7,7 +7,7 @@ Van Helsing: Seven years and you don't know what it does?
 Carl: I didn't say that. I said I don't know what it's for, what it does is [trim off one character at a time from the right side of a given position].
 ```
 
-Anyway, it requires JPython so make sure you have that configured in Burp.
+Anyway, it requires Jython so make sure you have that configured in Burp.
 
 Oh, and it doesn't work well in the Battering Ram configuration since there are multiple positions that could be used to determine the payload ([ref](https://github.com/PortSwigger/burp-extender-api/blob/master/src/main/java/burp/IIntruderPayloadGenerator.java#L34-L37)).
 
