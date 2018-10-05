@@ -1,4 +1,4 @@
-This plugin provides a payload generator for Intruder which will trim off one character at a time from the right side of a given position.  I don't really have any particular use case in mind, but I wrote it in an attempt to determine what sort of structure some encrypted data might have by removing one character at a time and seeing what errors appear.
+This plugin provides a payload generator for Intruder which will trim off one character at a time from the right side of a given position.  I don't really have any particular use case in mind, but I wrote it in an attempt to determine what sort of structure some encrypted data might have by removing one character at a time and seeing what errors appear.  I wrote [a blog post](https://tactifail.wordpress.com/2018/10/05/trim-bits-get-secrets/) demonstrating the plugin use against a mocked-up version of the client application.
 
 To paraphrase a conversation from Van Helsing:
 ```
