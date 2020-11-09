@@ -7,7 +7,7 @@ from jarray import array
 import re
 
 # UI stuff
-from javax.swing import JPanel, JButton, JEditorPane, JScrollPane, JTextArea, JTextField, JLabel, JMenuItem
+from javax.swing import JPanel, JButton, JScrollPane, JTextArea, JTextField, JMenuItem
 from javax.swing.text.html import HTMLDocument
 from java.awt import BorderLayout, Dimension, GridBagConstraints, GridBagLayout
 
@@ -20,7 +20,7 @@ class BurpExtender(IBurpExtender, ITab, IContextMenuFactory):
 		self._callbacks = callbacks
 		self._helpers = callbacks.getHelpers()
 		#sys.stdout = callbacks.getStdout() # DEBUG
-		callbacks.setExtensionName('Regex Intruder Position Generator')
+		callbacks.setExtensionName('IntRudeX')
 		callbacks.addSuiteTab(self)
 		callbacks.registerContextMenuFactory(self)
 		return
@@ -50,7 +50,7 @@ class BurpExtender(IBurpExtender, ITab, IContextMenuFactory):
 			resultsBox.requestFocusInWindow()
 			return
 
-		# Actually send to Intruder	
+		# Actually send to Intruder
 		def sendToIntruder(event):
 			# TODO Parse host, port, and SSL
 			offsets = ArrayList()
@@ -74,7 +74,9 @@ p3=p3val&p4=p4val&asdf=1234&qwer=123
 </xml>
 
 &sect;"""
+		# HTTP request box
 		contentBox = JTextArea(body, 10, 80)
+		contentBoxScroll = JScrollPane(contentBox)
 
 		# Regex box
 		regexBox = JTextField("[0-9]{3}", 40)
@@ -85,7 +87,7 @@ p3=p3val&p4=p4val&asdf=1234&qwer=123
 
 		# Results box
 		resultsBox = JTextArea("Results will be shown here", 10, 80)
-		
+		resultsBoxScroll = JScrollPane(resultsBox)        
 
 		# Main panel
 		mainPanel = JPanel(GridBagLayout())
@@ -93,8 +95,8 @@ p3=p3val&p4=p4val&asdf=1234&qwer=123
 		gbc.gridx = 0
 		gbc.gridy = 0
 		gbc.weightx = 0.8
-		contentBox.setPreferredSize(Dimension(1000, 300))
-		mainPanel.add(contentBox, gbc)
+		contentBoxScroll.setPreferredSize(Dimension(1000, 300))
+		mainPanel.add(contentBoxScroll, gbc)
 		gbc.gridx = 1
 		gbc.gridy = 0
 		gbc.weightx = 0.1
@@ -111,8 +113,8 @@ p3=p3val&p4=p4val&asdf=1234&qwer=123
 		gbc.gridy = 2
 		gbc.weightx = 1
 		gbc.weighty = 1
-		resultsBox.setPreferredSize(Dimension(1000, 300))
-		mainPanel.add(resultsBox, gbc)
+		resultsBoxScroll.setPreferredSize(Dimension(1000, 300))
+		mainPanel.add(resultsBoxScroll, gbc)
 
 		return mainPanel
 
