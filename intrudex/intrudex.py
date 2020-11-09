@@ -8,8 +8,7 @@ import re
 
 # UI stuff
 from javax.swing import JPanel, JButton, JScrollPane, JTextArea, JTextField, JMenuItem
-from javax.swing.text.html import HTMLDocument
-from java.awt import BorderLayout, Dimension, GridBagConstraints, GridBagLayout
+from java.awt import Dimension, GridBagConstraints, GridBagLayout
 
 # DEBUG for https://github.com/securityMB/burp-exceptions
 #from exceptions_fix import FixBurpExceptions # DEBUG
