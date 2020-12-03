@@ -1,0 +1,92 @@
+Windows Registry Editor Version 5.00
+
+; File extension register
+
+[HKEY_CLASSES_ROOT\.burp]
+@="Burp"
+
+[HKEY_CLASSES_ROOT\Burp]
+@="Burp Project File"
+
+
+
+; Command to open Burp project unpaused (spiders and scans running on startup)
+
+[HKEY_CLASSES_ROOT\Burp\Shell\Open]
+@="&Open Burp Project"
+"Icon"=hex(2):22,00,25,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,46,00,69,\
+  00,6c,00,65,00,73,00,25,00,5c,00,42,00,75,00,72,00,70,00,53,00,75,00,69,00,\
+  74,00,65,00,50,00,72,00,6f,00,5c,00,42,00,75,00,72,00,70,00,53,00,75,00,69,\
+  00,74,00,65,00,50,00,72,00,6f,00,2e,00,65,00,78,00,65,00,22,00,2c,00,30,00,\
+  00,00
+;Uncomment to hard-code
+;"Icon"="\"C:\\Program Files\\BurpSuitePro\\BurpSuitePro.exe\",0"
+
+[HKEY_CLASSES_ROOT\Burp\Shell\Open\Command]
+@=hex(2):22,00,25,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,46,00,69,\
+  00,6c,00,65,00,73,00,25,00,5c,00,42,00,75,00,72,00,70,00,53,00,75,00,69,00,\
+  74,00,65,00,50,00,72,00,6f,00,5c,00,42,00,75,00,72,00,70,00,53,00,75,00,69,\
+  00,74,00,65,00,50,00,72,00,6f,00,2e,00,65,00,78,00,65,00,22,00,20,00,2d,00,\
+  2d,00,75,00,6e,00,70,00,61,00,75,00,73,00,65,00,2d,00,73,00,70,00,69,00,64,\
+  00,65,00,72,00,2d,00,61,00,6e,00,64,00,2d,00,73,00,63,00,61,00,6e,00,6e,00,\
+  65,00,72,00,20,00,2d,00,2d,00,70,00,72,00,6f,00,6a,00,65,00,63,00,74,00,2d,\
+  00,66,00,69,00,6c,00,65,00,3d,00,22,00,25,00,31,00,22,00,00,00
+;Uncomment to hard-code
+;@="\"C:\\Program Files\\BurpSuitePro\\BurpSuitePro.exe\" --unpause-spider-and-scanner --project-file=\"%1\""
+
+
+
+; Context submenu
+
+[HKEY_CLASSES_ROOT\Burp\Shell\OpenOptions]
+"MUIVerb"="Open Burp Project w/ options"
+"SubCommands"="StartBurpPaused;StartBurpExtensionsDisabled;StartBurpPausedAndExtensionsDisabled"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\StartBurpPaused]
+@="scans and spider paused"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\StartBurpPaused\command]
+@=hex(2):25,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,46,00,69,00,6c,\
+  00,65,00,73,00,25,00,5c,00,42,00,75,00,72,00,70,00,53,00,75,00,69,00,74,00,\
+  65,00,50,00,72,00,6f,00,5c,00,42,00,75,00,72,00,70,00,53,00,75,00,69,00,74,\
+  00,65,00,50,00,72,00,6f,00,2e,00,65,00,78,00,65,00,20,00,2d,00,2d,00,70,00,\
+  72,00,6f,00,6a,00,65,00,63,00,74,00,2d,00,66,00,69,00,6c,00,65,00,3d,00,22,\
+  00,25,00,31,00,22,00,00,00
+;Uncomment to hard-code
+;@="\"C:\\Program Files\\BurpSuitePro\\BurpSuitePro.exe\" --project-file=\"%1\""
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\StartBurpExtensionsDisabled]
+@="extensions disabled"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\StartBurpExtensionsDisabled\command]
+@=hex(2):25,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,46,00,69,00,6c,\
+  00,65,00,73,00,25,00,5c,00,42,00,75,00,72,00,70,00,53,00,75,00,69,00,74,00,\
+  65,00,50,00,72,00,6f,00,5c,00,42,00,75,00,72,00,70,00,53,00,75,00,69,00,74,\
+  00,65,00,50,00,72,00,6f,00,2e,00,65,00,78,00,65,00,20,00,2d,00,2d,00,64,00,\
+  69,00,73,00,61,00,62,00,6c,00,65,00,2d,00,65,00,78,00,74,00,65,00,6e,00,73,\
+  00,69,00,6f,00,6e,00,73,00,20,00,2d,00,2d,00,75,00,6e,00,70,00,61,00,75,00,\
+  73,00,65,00,2d,00,73,00,70,00,69,00,64,00,65,00,72,00,2d,00,61,00,6e,00,64,\
+  00,2d,00,73,00,63,00,61,00,6e,00,6e,00,65,00,72,00,20,00,2d,00,2d,00,70,00,\
+  72,00,6f,00,6a,00,65,00,63,00,74,00,2d,00,66,00,69,00,6c,00,65,00,3d,00,22,\
+  00,25,00,31,00,22,00,00,00
+;Uncomment to hard-code
+;@="\"C:\\Program Files\\BurpSuitePro\\BurpSuitePro.exe\" --disable-extensions --unpause-spider-and-scanner --project-file=\"%1\""
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\StartBurpPausedAndExtensionsDisabled]
+@="scans and spider paused, extensions disabled"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\StartBurpPausedAndExtensionsDisabled\command]
+@=hex(2):25,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,46,00,69,00,6c,\
+  00,65,00,73,00,25,00,5c,00,42,00,75,00,72,00,70,00,53,00,75,00,69,00,74,00,\
+  65,00,50,00,72,00,6f,00,5c,00,42,00,75,00,72,00,70,00,53,00,75,00,69,00,74,\
+  00,65,00,50,00,72,00,6f,00,2e,00,65,00,78,00,65,00,20,00,2d,00,2d,00,64,00,\
+  69,00,73,00,61,00,62,00,6c,00,65,00,2d,00,65,00,78,00,74,00,65,00,6e,00,73,\
+  00,69,00,6f,00,6e,00,73,00,20,00,2d,00,2d,00,70,00,72,00,6f,00,6a,00,65,00,\
+  63,00,74,00,2d,00,66,00,69,00,6c,00,65,00,3d,00,22,00,25,00,31,00,22,00,00,\
+  00
+;Uncomment to hard-code
+;@="\"C:\\Program Files\\BurpSuitePro\\BurpSuitePro.exe\" --disable-extensions --project-file=\"%1\""
