@@ -1,4 +1,4 @@
-# Windows Registry `.burp file`  handler
+# Windows Registry `.burp` file handler
 
 Not a Burp plugin strictly speaking, but this Windows Registry file adds nice handling of `.burp` files by allowing double-click to open projects directly, instead of having to launch Burp and then open the file from the wizard. Also adds context menu options to launch with extensions disabled, spider and scanner paused, or both.
 
