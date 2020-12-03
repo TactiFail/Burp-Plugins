@@ -1,6 +1,9 @@
 # Burp-Plugins
 Just what it sounds like.
 
+## windows-registry
+Not a Burp plugin strictly speaking, but this Windows Registry file adds nice handling of `.burp` files by allowing double-click to open directly, instead of having to launch Burp and then open the file from the wizard. Also adds context menu options to launch with extensions disabled, spider and scanner paused, or both.
+
 ## stringtrim
 This plugin provides a payload generator for Intruder which will trim off one character at a time from the right side of a given position.
 
